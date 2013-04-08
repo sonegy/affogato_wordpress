@@ -1,5 +1,5 @@
 <?php
-global $afgtc_options;
+global $affogatoComments;
 ?>
 <div class="wrap">
   <?php screen_icon(); ?>
@@ -11,13 +11,13 @@ global $afgtc_options;
 		}
 	?>
 	<form method="post" action="options.php">
-		<?php settings_fields('afgtComments_options'); ?>
+		<?php settings_fields('affogatoComments'); ?>
 		<div id="poststuff" class="postbox">
 			<h3><?php _e('Basic Setting'); ?></h3>
 				<div class="inside">
-				<p><input type="text" id="afgtComments_appKey" name="afgtComments[appKey]" value="<?php echo $afgtc_options['appKey']; ?>"/><label for="afgtComments_appKey">APP KEY</label></p>
+				<p><input type="text" id="afgtComments_appKey" name="affogatoComments[appKey]" value="<?php echo $affogatoComments['appKey']; ?>"/><label for="afgtComments_appKey">APP KEY</label></p>
 				</div>
 		</div>
-		<input type="submit" class="button-primary" value="Update Options">
+    <?php submit_button(); ?>
 	</form>
 </div>

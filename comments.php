@@ -4,7 +4,7 @@
 	SKP.commentsPlugin({
 			target_id: 'affo_comments',
 			op_app_key: '<?php echo AFFOGATO_APP_KEY; ?>',
-			page_id: '<?php echo afgt_page_id(); ?>',
+			page_id: '<?php echo affogato_page_id(); ?>',
 			is_responsive: true
 	});
 </script>

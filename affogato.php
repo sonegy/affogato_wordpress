@@ -18,17 +18,17 @@ if (!function_exists('json_decode')) {
   } 
 }
 
-global $affogatoOptions;  # main options array in wp database options table
+global $affogatoComments;  # main options array in wp database options table
 global $affogatoComments_defaults;
-$affogatoOptions = get_option('affogatoComments');
+$affogatoComments = get_option('affogatoComments');
 $affogatoComments_defaults = array (
   'appKey' => '',
   'domainProtocol' => 'http'
 );
 
 define('DNS_ERROR', false);
-define('AFFOGATO_APP_KEY',          $affogatoOptions['appKey']);
-define('AFFOGATO_DOMAIN',           'commentweb-beta.libplanet.so');
+define('AFFOGATO_APP_KEY',          $affogatoComments['appKey']);
+define('AFFOGATO_DOMAIN',           'comments.skplanet.com');
 define('AFFOGATO_ADMIN_DOMAIN_URL', 'https://developers.skplanetx.com/my-center/app-station/comment-plugin/');
 define('AFFOGATO_PLUGIN_URL',       '//' . AFFOGATO_DOMAIN . '/script/plugin.js');
 define('AFFOGATO_API',              DNS_ERROR ? '1.234.67.16' : AFFOGATO_DOMAIN); 
@@ -105,7 +105,7 @@ function affogato_get_comments_number($count) {
 }
 
 function affogato_admin_init() {
-  register_setting('affogatoComments_options', 'affogatoComments', 'affogato_comments_sanatize');
+  register_setting('affogatoComments', 'affogatoComments', 'affogato_comments_sanatize');
 }
 
 function affogato_manage() {
