@@ -28,7 +28,7 @@ $affogatoComments_defaults = array (
 
 define('DNS_ERROR', false);
 define('AFFOGATO_APP_KEY',          $affogatoComments['appKey']);
-define('AFFOGATO_DOMAIN',           'comments.skplanet.com');
+define('AFFOGATO_DOMAIN',           'comments.skplanetx.com');
 define('AFFOGATO_ADMIN_DOMAIN_URL', 'https://developers.skplanetx.com/my-center/app-station/comment-plugin/');
 define('AFFOGATO_PLUGIN_URL',       '//' . AFFOGATO_DOMAIN . '/script/plugin.js');
 define('AFFOGATO_API',              DNS_ERROR ? '1.234.67.16' : AFFOGATO_DOMAIN); 
